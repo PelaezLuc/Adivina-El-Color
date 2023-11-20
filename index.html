@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Peláez">
+    <meta name="description" content="Juego: Adivina el Color">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/paleta.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="./index.js" defer type="module"></script>
+    <title>Adivina El Color</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo-paleta" src="/images/paleta.png" alt="logo-paleta" />
+    </header>
+
+    <main>
+        <section class="seccion-1">
+            <h1>
+                ¿Qué Color Es?
+            </h1>
+        </section>
+
+        <section class="seccion-2 contenedor-colores">
+            <div class="neomorf">
+                <div id="caja-1" class="caja"></div>
+            </div>
+
+            <div class="neomorf">
+                <div id="caja-2" class="caja"></div>
+            </div>
+
+            <div class="neomorf">
+                <div id="caja-3" class="caja"></div>
+            </div>
+        </section>
+
+        <section class="seccion-3">
+            <p id="codigo-rgb">
+            </p>
+        </section>
+
+        <section class="seccion-4">
+            <ul>
+                <li>
+                    <p>Aciertos</p>
+                    <span class="acierto"></span>
+                    <span class="acierto"></span>
+                    <span class="acierto"></span>
+                </li>
+                <li id="boton-reset">
+                    <button class="boton-reset">Nuevo</p>
+                </li>
+                <li>
+                    <span class="fallo"></span>
+                    <span class="fallo"></span>
+                    <span class="fallo"></span>
+                    <p>Fallos</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Lucas Peláez - Full Stack Web Developer - 2023 ©️</p>
+    </footer>
+
+</body>
+
+</html>
