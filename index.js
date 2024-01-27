@@ -14,13 +14,22 @@ let fallo = 0;
 
 function generarCodigoRGB() {
   const max = 256;
-
-  const red = Math.floor(Math.random() * max);
-  const green = Math.floor(Math.random() * max);
-  const blue = Math.floor(Math.random() * max);
+  const umbral = 5;
+  let red, green, blue;
+  do {
+      red = Math.floor(Math.random() * max);
+      console.log(red)
+      green = Math.floor(Math.random() * max);
+      console.log(green)
+      blue = Math.floor(Math.random() * max);  
+      console.log(blue)
+  } while (
+      Math.abs(red - green) >= umbral &&
+      Math.abs(green - blue) >= umbral &&   
+      Math.abs(blue - red) >= umbral    
+  );
 
   let resultado = `${red}, ${blue}, ${green}`;
-
   return resultado;
 }
 
@@ -38,7 +47,7 @@ function generarBackgroundColor() {
 
 function imprimirCodigoRGB() {
   let codigo = document.getElementById("codigo-rgb");
-  codigo.textContent = `Código RGB: ${codigoRGB}`;
+  codigo.innerHTML = `<span style="color: red;">R</span><span style="color: green;">G</span><span style="color: blue;">B</span>: ${codigoRGB}`;
 }
 
 function generarNumAleatorio(num) {
